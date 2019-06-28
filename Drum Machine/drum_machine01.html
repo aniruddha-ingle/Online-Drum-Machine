@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Drum Machine</title>
+
+    <style type="text/css">
+      div.button{
+        background-color: green;
+        width: 50px;
+        height: 80px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-family: sans-serif;
+        display:inline-grid;
+      }
+      div.button:active{
+        background-color: cyan;
+      }
+      h1{
+        font-size: 400%;
+        text-align: center;
+        font-style:italic;
+      }
+      div.buttonContainer{
+        text-align: center;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <audio src="sounds/808_kick.wav" autostart="false" id="808_kick"></audio>
+    <audio src="sounds/808_snare.wav" autostart="false" id="808_snare"></audio>
+    <audio src="sounds/808_hihatclosed.wav" autostart="false" id="808_hihatclosed"></audio>
+    <audio src="sounds/808_hihatopen.wav" autostart="false" id="808_hihatopen"></audio>
+    <audio src="sounds/808_cymbal.wav" autostart="false" id="808_cymbal"></audio>
+    <audio src="sounds/808_tom.wav" autostart="false" id="808_tom"></audio>
+    <audio src="sounds/808_clap.wav" autostart="false" id="808_clap"></audio>
+    <audio src="sounds/808_cowbell.wav" autostart="false" id="808_cowbell"></audio>
+
+
+    <h1>Drum Machine</h1>
+
+    <div class = "buttonContainer">
+      <div class="button" onclick="playSample('808_kick')">Kick</div>
+      <div class="button" onclick="playSample('808_snare')">Snare</div>
+      <div class="button" onclick="playSample('808_hihatclosed')">Hihat Closed</div>
+      <div class="button" onclick="playSample('808_hihatopen')">Hihat Open</div>
+      <div class="button" onclick="playSample('808_cymbal')">Cymbal</div>
+      <div class="button" onclick="playSample('808_tom')">Tom</div>
+      <div class="button" onclick="playSample('808_clap')">Clap</div>
+      <div class="button" onclick="playSample('808_cowbell')">Cowbell</div>
+    </div>
+    <script>
+      function playSample(sampleName) {
+        var sample = document.getElementById(sampleName);
+        sample.play();
+      }
+    </script>
+  </body>
+
+</html>
